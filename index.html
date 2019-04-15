@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <!-- Content Type Meta tag -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <!--Responsive Viewport Meta tag-->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        
+		<title>Todo list app</title>
+        
+		<!-- Montserrat font embed -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+
+        <!-- Font Awesome embed -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<!-- Stylesheets <-->
+		<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+	</head>
+	<body>
+
+		<header>
+			<input type="text" placeholder="What needs to be done?" id="item">
+			<button id="add">
+				<i class="fas fa-plus"></i>
+			</button>
+		</header>
+
+		<div class="container">
+			<!-- Uncompleted tasks -->
+			<ul class="todo" id="todo"></ul>
+
+			<!-- Completed tasks -->
+			<ul class="todo" id="completed"></ul>
+		</div>
+
+		<!-- JavaScripts -->
+		<script src="resources/js/main.js"></script>
+	</body>
+</html>
