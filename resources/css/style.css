@@ -50,3 +50,71 @@ header button {
   border: 0px;
   cursor: pointer;
 }
+
+.plus-button {
+  fill: lightblue;
+}
+
+.container {
+  width: 100%;
+  float: left;
+  padding: 15px;
+}
+
+ul.todo {
+  width: 100%;
+  float: left;
+}
+
+ul.todo li {
+  list-style: none;
+  display: flex;
+  align-content: center;
+  word-break: break-word;
+  /*width: 100%;*/
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+  line-height: 22px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px lightseagreen;
+  margin: 0 0 10px 0;
+  padding: 14px 100px 14px 14px;
+}
+
+ul.todo li:last-of-type {
+  margin-bottom: 0;
+}
+
+ul.todo li .buttons {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul.todo li .buttons button {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background: none;
+  position: relative;
+  border: 0px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ul.todo li .buttons button:last-of-type:before {
+  content: '';
+  width: 1px;
+  height: 30px;
+  background: lightgrey;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}

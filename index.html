@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
         
         
-		<title>Todo list app</title>
+		<title>Basic Todo</title>
         
 		<!-- Montserrat font embed -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
@@ -25,13 +25,25 @@
 		<header>
 			<input type="text" placeholder="What needs to be done?" id="item">
 			<button id="add">
-				<i class="fas fa-plus"></i>
+				<i class="fas fa-plus plus-button"></i>
 			</button>
 		</header>
 
 		<div class="container">
 			<!-- Uncompleted tasks -->
-			<ul class="todo" id="todo"></ul>
+			<ul class="todo" id="todo">
+				<li>
+					This is an item
+					<div class="buttons">
+						<button>
+								
+						</button>
+						<button>
+							
+						</button>					
+					</div>
+				</li>
+			</ul>
 
 			<!-- Completed tasks -->
 			<ul class="todo" id="completed"></ul>
