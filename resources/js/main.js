@@ -25,6 +25,27 @@ function addItem (value) {
     document.getElementById('item').value = '';
 }
 
+function removeItem() {
+    var item = this.parentNode.parentNode;
+    var parent = this.parentNode.parentNode.parentNode;
+
+    parent.removeChild(item);
+}
+
+function completeItem() {
+    var item = this.parentNode.parentNode;
+    var parent = this.parentNode.parentNode.parentNode;
+    var id = parent.id;
+
+    // check if task belongs in completed or todo
+    var target = (id === "todo") 
+        ? document.getElementById('completed')
+        : document.getElementById('todo')
+
+    parent.removeChild(item);
+    target.insertBefore(item, target.childNodes[0]);
+}
+
 // Adds users todo item to the list
 function addItemToDOM(text, completed) {
     var list = (completed) 
@@ -40,14 +61,19 @@ function addItemToDOM(text, completed) {
     var remove = document.createElement('button');
     remove.classList.add('remove');
     remove.innerHTML = removeSVG;
+    // add functionality for removing task
+    remove.addEventListener('click', removeItem)
 
     var complete = document.createElement('button');
     complete.classList.add('complete');
     complete.innerHTML = completeSVG;
+    // add functionality for completing task
+    complete.addEventListener('click', completeItem)
 
     buttons.appendChild(remove);
     buttons.appendChild(complete);
     item.appendChild(buttons);
 
     list.insertBefore(item, list.childNodes[0]);
+
 }
