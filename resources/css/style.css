@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
     background: lightgrey;
     padding: 100px 0 0 0;
